@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:signaturePad="clr-namespace:Syncfusion.Maui.SignaturePad;assembly=Syncfusion.Maui.SignaturePad"
+             x:Class="Ejercicio2._2_Grupo2.Views.PageInit"
+             Title="Ubicaciones"
+             Background="White">
+
+    <ScrollView>
+        <StackLayout>
+            <Frame
+                Margin="20,20,20,10"
+                BorderColor="Black"
+                CornerRadius="10">
+                <signaturePad:SfSignaturePad
+                    x:Name="signaturePad" 
+                    HeightRequest="300" 
+                    WidthRequest="300" 
+                    StrokeColor="Black"/>
+            </Frame>
+
+
+            <Button 
+                Margin="20,20,20,0"
+                HeightRequest="50" 
+                WidthRequest="150" 
+                HorizontalOptions="Center"
+                BackgroundColor="#2b0098"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="16"
+                Text="Limpiar Firma"
+                Clicked="OnClearButtonClicked" />
+
+            <Label     
+               Text="Latitud actual"
+               FontSize="18"
+               FontAttributes="Bold"
+               TextColor="Black"
+               IsVisible="True"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+               Margin="20,20,0,0"/>
+
+            <Entry 
+                x:Name="LatitudEntry"
+               IsEnabled="False"
+               Placeholder="Latitud"
+               FontSize="16"
+               TextColor="Black"
+               Margin="15,0,20,0"/>
+
+            <Label     
+               Text="Longitud actual"
+               FontSize="18"
+               FontAttributes="Bold"
+               TextColor="Black"
+               IsVisible="True"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+               Margin="20,20,0,0"/>
+
+            <Entry 
+                x:Name="LongitudEntry"
+               IsEnabled="False"
+               Placeholder="Longitud"
+               FontSize="16"
+               TextColor="Black"
+               Margin="15,0,20,30"/>
+
+            <Button 
+                Margin="20,0,20,20"
+                HeightRequest="50" 
+                WidthRequest="250" 
+                HorizontalOptions="CenterAndExpand"
+                BackgroundColor="#2b0098"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="16"
+                Text="Guardar Ubicación"
+                Clicked="OnSaveButtonClicked"/>
+
+            <Button 
+                Margin="20,0,20,20"
+                HeightRequest="50" 
+                WidthRequest="250" 
+                HorizontalOptions="CenterAndExpand"
+                BackgroundColor="#2b0098"
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="16"
+                Text="Ubicaciones Guardadas"
+                Clicked="OnSaveButtonClicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
